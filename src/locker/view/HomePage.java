@@ -72,6 +72,8 @@ public class HomePage {
 	    		display();
 	    		break;
 	    	case 3://Login an existing user
+	    		login();
+	    		display();
 	    		
 	    		
 	    	break;
@@ -152,6 +154,58 @@ public class HomePage {
 		                e.printStackTrace();
 		            }
 
+	    }
+	    public void login() throws IOException
+	    {
+	    	System.out.println("Enter your username");
+	     	username=sc.next();
+	   unn=username;
+	    username =username+".txt";
+		
+	  //Specify your own path here,your path would be visible where your project is stored in your system
+		File myFile = new File("C:\\Users\\Devansh Kapoor\\Desktop\\sql\\CompanyLockers");
+
+		
+		String[] flist = myFile.list();
+		int flag = 0;
+		if (flist == null) {
+			System.out.println("Database is empty");
+		}
+		else {
+
+			// Linear search in the array
+			for (int i = 0; i < flist.length; i++) {
+				String filename = flist[i];
+				if (filename.equals(username)) {
+					System.out.println("Enter password");
+					 String	password=sc.next();
+					  BufferedReader br = new BufferedReader(new FileReader("userpass.txt"));
+					  
+					  String st;
+					  while ((st = br.readLine()) != null)
+					    if(st.equals(unn))
+					    {
+					    	st=br.readLine();
+					    	if(st.equals(password))
+					    	{
+					    		System.out.println("Login Successful");
+					    
+					    		
+					    	}
+					    	else
+					    		System.out.println("Invalid Credentials");
+					    	
+					    }
+					flag = 1;
+
+				   
+				}
+			}
+		}
+
+		if (flag == 0) {
+			System.out.println("User not found,try again");
+			}
 	    }
 	
    }
