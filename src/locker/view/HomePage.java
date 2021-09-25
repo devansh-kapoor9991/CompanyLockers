@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.List;
 
 public class HomePage {
-	  private String product = "Welcome to LockMe!";
+	  private String product = "Welcome to LockMe Application!";
 	  private String developerDetails = "Developer: Devansh Kapoor";
 	  int selection;
 	  String userName;
@@ -164,7 +164,7 @@ public class HomePage {
 		
 	  //Specify your own path here,your path would be visible where your project is stored in your system
 		File myFile = new File("C:\\Users\\Devansh Kapoor\\Desktop\\sql\\CompanyLockers");
-
+		
 		
 		String[] flist = myFile.list();
 		int flag = 0;
@@ -189,7 +189,7 @@ public class HomePage {
 					    	if(st.equals(password))
 					    	{
 					    		System.out.println("Login Successful");
-					    
+					    		OptionsPage op1=new OptionsPage(unn);
 					    		
 					    	}
 					    	else
