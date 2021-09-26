@@ -35,8 +35,8 @@ Project git repositories:-
 How to run the project:-
 1- clone project 
 	clone git: git clone https://github.com/devansh-kapoor9991/CompanyLockers.git
-2-In line 94 of HomePage.java -- Specify your own path here,your path would be visible where your project is stored in your system
-  In line 166 of HomePage.java - Specify your own path here,your path would be visible where your project is stored in your system
+2-In line 94 of HomePage.java -- Specify your own path here,your path would be visible where your project is stored in your system.
+  In line 166 of HomePage.java - Specify your own path here,your path would be visible where your project is stored in your system.
 3-open src --> locker.welcome --> Home.java -right click-select run as java application
 
 Package and Classes :-
